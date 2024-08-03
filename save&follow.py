@@ -6,8 +6,8 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import ElementClickInterceptedException, NoSuchElementException
 
-MY_EMAIL = "email"
-PASSWORD = "password"
+ACCOUNT_EMAIL = "email"
+ACCOUNT_PASSWORD = "password"
 
 chrome_opt = webdriver.ChromeOptions()
 chrome_opt.add_experimental_option("detach", True)
@@ -22,9 +22,9 @@ sign_in.click()
 
 time.sleep(2)
 email_field = driver.find_element(By.ID, "username")
-email_field.send_keys(MY_EMAIL)
+email_field.send_keys(ACCOUNT_EMAIL)
 password_field = driver.find_element(By.ID, "password")
-password_field.send_keys(PASSWORD, Keys.ENTER)
+password_field.send_keys(ACCOUNT_PASSWORD, Keys.ENTER)
 time.sleep(2)
 input("Press Enter after solving the Captcha")
 
